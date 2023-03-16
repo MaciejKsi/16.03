@@ -23,3 +23,8 @@ function checkAdmin() {
     window.location.href = "login.html";
   }
 }
+
+function logOut() {
+  localStorage.setItem("login", "false");
+  window.location.href = "login.html";
+}
