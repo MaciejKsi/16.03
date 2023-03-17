@@ -20,14 +20,11 @@ function checkUser() {
   if (user.upr != "admin" && url.includes("admin.html")) {
     window.location.href = "index.html";
   }
-}
 
-function checkUs() {
-  const user = JSON.parse(localStorage.getItem("upr"));
-
-  const url = window.location.href;
-
-  if (user.upr != "user" && url.includes("user.html")) {
+  if (
+    (user.upr != "user" || user.upr != "admin") &&
+    url.includes("user.html")
+  ) {
     window.location.href = "index.html";
   }
 }
